@@ -1,0 +1,7 @@
+admin : admin
+moderator : moderator
+user : userpass
+
+user1 : user1
+mod1 : mod1
+adm1 : adm1
