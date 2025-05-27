@@ -60,6 +60,7 @@ class AddReviewView(LoginRequiredMixin, CreateView):
         book = get_object_or_404(Book, pk=self.kwargs['pk'])
         form.instance.book = book
         form.instance.user = self.request.user
+        form.cleaned_data['text'] = form.cleaned_data['text'].strip()
         messages.success(self.request, 'Ваша рецензия добавлена!')
         return super().form_valid(form)
 
